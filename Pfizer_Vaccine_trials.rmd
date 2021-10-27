@@ -23,8 +23,11 @@ groupsize = 44000
 subgp = groupsize/2
 vaccine = c(subgp-9,9)
 placebo =  c(subgp-85,85)
-results = as.table(cbind(vaccine,placebo))
+results = as.table(cbind(placebo, vaccine))
+
+
 rownames(results) <- c("none","covid")
+
 
 ```
 
@@ -48,4 +51,4 @@ low=(fish$conf.int[1]/(fish$conf.int[1] + 1))*100
 hi=(fish$conf.int[2]/(fish$conf.int[2] + 1))*100
 ```
 
-## Effectiveness Confidence Interval `r low`  to `r hi`
+## Effectiveness Confidence Interval `r low`% to `r hi`%
